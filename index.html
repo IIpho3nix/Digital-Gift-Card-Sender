@@ -217,7 +217,7 @@
 
         if (imageUrl && cardName && cardCode && platform && message) {
           var base64CardCode = btoa(cardCode);
-          var generatedParams = `?image=${imageUrl}&name=${cardName}&code=${base64CardCode}&platform=${platform}&message=${message}`;
+          var generatedParams = `?image=${encodeURIComponent(imageUrl)}&name=${encodeURIComponent(cardName)}&code=${base64CardCode}&platform=${encodeURIComponent(platform)}&message=${encodeURIComponent(message)}`;
           copyURLToClipboard(
             window.location.origin + window.location.pathname + generatedParams
           );
