@@ -175,15 +175,7 @@
 
           coverImage.src = imageUrl;
           name.innerText = nameText;
-          code.innerText = "Hover to reveal";
-
-          code.addEventListener("mouseenter", function () {
-            code.innerText = decodedKey;
-          });
-
-          code.addEventListener("mouseleave", function () {
-            code.innerText = "Hover to reveal";
-          });
+          code.innerText = decodedKey;
 
           code.addEventListener("click", function () {
             var tempInput = document.createElement("textarea");
